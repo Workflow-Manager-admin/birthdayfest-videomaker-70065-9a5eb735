@@ -24,7 +24,8 @@
     "typescript": "5.5.4"
   },
   "scripts": {
-    "dev": "remotion studio --hot --host 0.0.0.0 # You may append --public-address <your-public-url> for debugging HMR/socket errors in a remote IDE. See README for details.",
+    "dev": "remotion studio --hot --host 0.0.0.0 # Use --public-address $PUBLIC_URL if in remote/cloud/devcontainer. See README for critical HMR/webpack config.",
+    "dev:public": "remotion studio --hot --host 0.0.0.0 --public-address $PUBLIC_URL",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"

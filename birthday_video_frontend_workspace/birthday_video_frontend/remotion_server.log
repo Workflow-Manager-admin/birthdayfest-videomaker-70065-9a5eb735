@@ -1,9 +1,7 @@
 
 > remotion@1.0.0 dev
-> remotion studio --hot --host 0.0.0.0 --port 3000
-
-
-Error: You specified port 3000 to be used for the HTTP server, but it is not available. ChooBuilding...
-Built in 134ms
-ve the setting to let Remotion automatically select a free port.
-    at Object.getDesiredPort (/home/kavia/workspace/code-generation/birthdayfest-videomaker-70065-9a5eb735/birthday_video_frontend_workspace/birthday_video_frontend/node_modules/@remotion/renderer/dist/get-port.js:65:15)
+> remotion studio --hot --host 0.0.0.0 # You may append --public-address <your-public-url> for debugging HMR/socket errors in a remote IDE. See README for details. --port 3To restart - Local: http://localhost:3000, Network: http://172.17.0.2:3000
+Building...
+Built in 113ms
+ing...
+Built in 136ms
