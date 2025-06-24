@@ -1,10 +1,8 @@
 // All browser-specific code inside a function that's called only in browser context.
+/* eslint-disable no-undef */
 function browserMain() {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const React = require("react");
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const { createRoot } = require("react-dom/client");
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const { App } = require("./App");
 
   const cdnId = "twcdn";
@@ -25,5 +23,8 @@ function browserMain() {
   const root = createRoot(container);
   root.render(React.createElement(App));
 }
+/* eslint-enable no-undef */
 
 browserMain();
+
+export {};

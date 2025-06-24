@@ -15,9 +15,10 @@ function loadIfBrowser() {
   if (
     isBrowser &&
     typeof location !== "undefined" &&
+    // eslint-disable-next-line no-undef
     location.pathname === "/"
   ) {
-    import("./main");
+    import("./main"); // Import for side effect only; does not expect module exports
   }
 }
 

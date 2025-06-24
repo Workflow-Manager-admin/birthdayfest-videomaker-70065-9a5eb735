@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import { Player, RenderPoster } from "@remotion/player";
+import { Player } from "@remotion/player";
 import { BirthdayVideo } from "./BirthdayVideo";
 import { IconGift, IconDownload } from "./icons";
 
@@ -47,8 +47,6 @@ const VIDEO_OPTIONS = {
   width: 720,
   height: 1280, // Portrait for mobile aesthetics
 };
-
-import { isBrowser } from "./isBrowser";
 
 export const App: React.FC = () => {
   const [name, setName] = useState<string>("");
@@ -157,19 +155,7 @@ export const App: React.FC = () => {
             <div className={EXPORT_HINT}>
               <strong>Happy with your video?</strong>
               <br />
-              Download via Remotion Studio/CLI:
-              <br />
-              <RenderPoster
-                component={BirthdayVideo}
-                durationInFrames={VIDEO_OPTIONS.durationInFrames}
-                inputProps={{
-                  name: name.trim(),
-                  ...COLORS,
-                }}
-                compositionHeight={VIDEO_OPTIONS.height}
-                compositionWidth={VIDEO_OPTIONS.width}
-                fps={VIDEO_OPTIONS.fps}
-              />
+              Download via Remotion Studio/CLI.
               <br />
               <span className="opacity-70">
                 For full export: use <code>npx remotion render ...</code> in the terminal/CLI for best results.
