@@ -1,0 +1,4 @@
+{
+    "command": "npm run build",
+    "working_directory": "/home/kavia/workspace/code-generation/birthdayfest-videomaker-70065-9a5eb735/birthday_video_frontend_workspace/birthday_video_frontend"
+}
