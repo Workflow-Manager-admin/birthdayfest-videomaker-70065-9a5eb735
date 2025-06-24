@@ -41,6 +41,30 @@ npx remotion upgrade
 
 Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
 
+---
+
+## Troubleshooting Remotion Studio/HMR/lazy-compilation in cloud/devcontainer/remote
+
+If you see errors like "**HMR/lazy-compilation server communication error**", "**WebSocket disconnect**", "**Invalid Host/Origin header**", or if Remotion Studio's preview does not refresh:
+
+1. Make sure to use the dev script:
+   ```sh
+   npm run dev
+   ```
+2. If running inside a remote IDE, cloud workspace, Docker, or similar, the dev server must listen on all interfaces (already set by `--host 0.0.0.0`).
+3. Sometimes, the auto-detected public address is incorrect. **In that case, append `--public-address`**, e.g.:
+   ```sh
+   remotion studio --hot --host 0.0.0.0 --public-address https://vscode-internal-...kavia.ai:3000
+   ```
+   Replace the URL with your actual workspace/preview/public url.
+
+4. These steps align Remotion's HMR/WebSocket endpoint with your browser and avoid lazy compilation/HMR errors in cloud setups.
+5. If problems continue, clear your browser cache or try in a fresh browser window.
+
+See [Remotion's remote troubleshooting guide](https://www.remotion.dev/docs/troubleshooting/remote) for full details.
+
+---
+
 ## Help
 
 We provide help on our [Discord server](https://discord.gg/6VzzNDwUwV).
